@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MartSmart | Supermarket Management System</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #ee0979, #ff6a00);
+            --soft-bg: #f8faff;
+            --dark-text: #1e272e;
+        }
+
+        body {
+            background-color: var(--soft-bg);
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-text);
+        }
+
+        /* --- NAVIGATION --- */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid #ee0979;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* --- HERO: SYSTEM OVERVIEW --- */
+        .hero-banner {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 100px 0;
+            border-radius: 0 0 50% 50% / 20px;
+            text-align: center;
+        }
+
+        .hero-banner h1 {
+            font-weight: 800;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* --- IMAGE CARDS --- */
+        .system-section {
+            padding: 80px 0;
+            border-radius: 30px;
+            margin: 40px 0;
+            background: white;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .system-section:hover {
+            transform: translateY(-10px);
+        }
+
+        .img-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(238, 9, 121, 0.2);
+        }
+
+        .img-container img {
+            transition: transform 0.5s ease;
+            width: 100%;
+            height: auto;
+        }
+
+        .system-section:hover img {
+            transform: scale(1.05);
+        }
+
+        /* --- ACCENT ELEMENTS --- */
+        .portal-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 50px;
+            background: rgba(238, 9, 121, 0.1);
+            color: #ee0979;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+        }
+
+        .btn-mart {
+            background: var(--primary-gradient);
+            color: white;
+            border: none;
+            padding: 12px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 10px 20px rgba(238, 9, 121, 0.3);
+            transition: 0.3s;
+        }
+
+        .btn-mart:hover {
+            color: white;
+            box-shadow: 0 15px 30px rgba(238, 9, 121, 0.5);
+            transform: scale(1.05);
+        }
+
+        .section-title {
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background: #1e272e;
+            color: #bdc3c7;
+            padding: 50px 0;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand fs-2" href="index.html">
+                <i class="fas fa-shopping-basket me-2"></i> MartSmart
+            </a>
+            <div class="ms-auto d-flex align-items-center">
+                <a href="customerLogin.jsp" class="nav-link text-dark fw-bold me-3">Login</a>
+                <a href="customerRegister.jsp" class="btn btn-mart py-2">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-banner">
+        <div class="container">
+            <h1>Supermarket Management <br>System </h1>
+            <p class="lead mb-4">A unified ERP solution for inventory, sales, logistics, and customer engagement.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#workflow" class="btn btn-light rounded-pill px-4 fw-bold">System Workflow</a>
+                <a href="customerRegister.jsp" class="btn btn-outline-light rounded-pill px-4">Register Store</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mt-5" id="workflow">
+        
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">How MartSmart Connects Your Business</h2>
+            <div class="mx-auto" style="width: 80px; height: 4px; background: var(--primary-gradient); border-radius: 2px;"></div>
+        </div>
+
+        <section class="row system-section align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0 px-md-5">
+                <div class="portal-badge">Control Center</div>
+                <h2 class="section-title">Centralized Administration</h2>
+                <p class="text-muted">The brain of the operation. Admins can monitor system-wide sales, manage store registrations, and oversee the global user database with high-level security protocols.</p>
+                <ul class="list-unstyled mb-4">
+                    <li><i class="fas fa-check-circle text-danger me-2"></i> Real-time Analytics Dashboard</li>
+                    <li><i class="fas fa-check-circle text-danger me-2"></i> User Access Management</li>
+                </ul>
+                <a href="adminLogin.jsp" class="btn btn-mart">Open Admin Portal</a>
+            </div>
+            <div class="col-lg-6">
+                <div class="img-container">
+                    <img src="img/admin.jpg" alt="Data Analytics">
+                </div>
+            </div>
+        </section>
+
+        <section class="row system-section align-items-center">
+            <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0 px-md-5">
+                <div class="portal-badge">Retail Management</div>
+                <h2 class="section-title">Shop & Inventory Hub</h2>
+                <p class="text-muted">Designed for efficiency. Shop managers can update stock levels, process point-of-sale (POS) data, and generate daily revenue reports instantly.</p>
+                <ul class="list-unstyled mb-4">
+                    <li><i class="fas fa-check-circle text-danger me-2"></i> Automated Stock Alerts</li>
+                    <li><i class="fas fa-check-circle text-danger me-2"></i> Digital Invoice Generation</li>
+                </ul>
+                <a href="shopLogin.jsp" class="btn btn-mart">Manage My Shop</a>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="img-container">
+                    <img src="img/supermarket.jpeg" alt="Supermarket Store">
+                </div>
+            </div>
+        </section>
+
+        <section class="row system-section align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0 px-md-5">
+                <div class="portal-badge">Customer Experience</div>
+                <h2 class="section-title">Personalized Shopping</h2>
+                <p class="text-muted">A seamless interface for the modern shopper. Customers can browse local inventories, place orders, and track their loyalty points through a mobile-first portal.</p>
+                <a href="customerLogin.jsp" class="btn btn-mart">Start Shopping</a>
+            </div>
+            <div class="col-lg-6">
+                <div class="img-container">
+                    <img src="img/customer.avif" alt="Mobile Shopping">
+                </div>
+            </div>
+        </section>
+
+        <section class="row system-section align-items-center">
+            <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0 px-md-5">
+                <div class="portal-badge">Last-Mile Logistics</div>
+                <h2 class="section-title">Agent Dispatch System</h2>
+                <p class="text-muted">Bridging the gap between store and home. Delivery agents receive optimized routes, update delivery statuses, and confirm successful handovers in real-time.</p>
+                <a href="agentLogin.jsp" class="btn btn-mart">Agent Login</a>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="img-container">
+                    <img src="img/agent.webp" alt="Delivery Logistics">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+ 
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
